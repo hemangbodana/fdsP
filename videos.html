@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="components/LOGO PNG.png">
+  <title>Architecture Project Videos | Hospital & Bungalow Design Tours | Favourite Design Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta name="description"
+    content="Watch 3D walkthroughs, client testimonials, and design process videos of our hospital, bungalow, and interior architecture projects.">
+  <meta name="keywords"
+    content="architecture videos, hospital design walkthrough, bungalow 3D tour, interior design video, architectural visualization, project reels, design presentation, building animation, architecture firm videos, virtual site tour">
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="components/LOGO PNG.png" alt="logo" height="100px" width="110px">
+      </a>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">HOME</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="projects.html">PROJECTS</a></li>
+      <li><a href="videos.html">VIDEOS</a></li>
+      <li><a href="contactus.html">CONTACT US</a></li>
+    </ul>
+  </nav>
+
+  <section class="videos-section">
+    <h2 class="section-title">Our Videos</h2>
+    <div class="videos-grid">
+      <!-- Video cards will be dynamically added here -->
+    </div>
+  </section>
+
+  <section class="testimonials-section">
+    <h2 class="section-title">Testimonials</h2>
+    <div class="testimonials-grid">
+      <!-- Testimonial cards will be dynamically added here -->
+    </div>
+  </section>
+
+
+
+  <!-- Social Icons -->
+  <div class="social-icons">
+    <a href="https://www.pinterest.com/favourite_design_studio/" target="_blank"><img src="components/pinterest.png"
+        alt="Pinterest"></a>
+    <a href="https://www.youtube.com/@FavouriteDesignStudio" target="_blank"><img
+        src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+    <a href="https://www.instagram.com/favourite_design_studio" target="_blank"><img
+        src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+  </div>
+
+  <script>
+    // Mock video data with YouTube video IDs
+    const videos = [
+      {
+        id: 'https://youtu.be/QFv9MuikzXg?si=_FQOdGZuIwweoRDr',
+        title: 'Hospital Tour - Laparoscopy Wing',
+        description: 'Take a virtual tour of our state-of-the-art laparoscopy hospital facility in Pune.',
+        thumbnail: 'https://img.youtube.com/vi/QFv9MuikzXg/sddefault.jpg'
+      },
+      {
+        id: 'https://youtu.be/1cANO_eAAOo?si=tr7qRu7ajooOTcJN',
+        title: 'Patient Success Story',
+        description: 'Hear from our satisfied patients about their experience with our medical services.',
+        thumbnail: 'https://img.youtube.com/vi/1cANO_eAAOo/sddefault.jpg'
+      },
+      {
+        id: 'https://youtu.be/fQNs3JXx9II?si=ol7MM80nK3sO5kN-',
+        title: 'Medical Equipment Showcase',
+        description: 'Explore our advanced medical equipment and cutting-edge technology.',
+        thumbnail: 'https://img.youtube.com/vi/fQNs3JXx9II/sddefault.jpg'
+      },
+      {
+        id: 'https://youtu.be/ch-9xETWFzI?si=Ku9l6WK3Fse6cvLB',
+        title: 'Doctor Interview Series',
+        description: 'Expert insights from our team of experienced medical professionals.',
+        thumbnail: 'https://img.youtube.com/vi/ch-9xETWFzI/sddefault.jpg'
+      },
+      {
+        id: 'https://youtu.be/FZn-DOkAixQ?si=ZytgxjIimGQYan_W',
+        title: 'Facility Overview',
+        description: 'Comprehensive overview of our hospital facilities and services.',
+        thumbnail: 'https://img.youtube.com/vi/FZn-DOkAixQ/sddefault.jpg'
+      },
+      {
+        id: 'https://youtu.be/QUDaDL3c2iU?si=Ro5JYTENDrxBHqjZ',
+        title: 'Community Health Program',
+        description: 'Our commitment to community health and wellness initiatives.',
+        thumbnail: 'https://img.youtube.com/vi/QUDaDL3c2iU/sddefault.jpg'
+      },
+      {
+        id: 'https://youtu.be/U5ye1Mh2Hpk?si=j8m6HujVy4I7Va9D',
+        title: 'Community Health Program',
+        description: 'Our commitment to community health and wellness initiatives.',
+        thumbnail: 'https://img.youtube.com/vi/U5ye1Mh2Hpk/sddefault.jpg'
+      }, {
+        id: 'https://youtu.be/i2z0KlfNSW8?si=aOdZhQLU30RzdWWO',
+        title: 'Community Health Program',
+        description: 'Our commitment to community health and wellness initiatives.',
+        thumbnail: 'https://img.youtube.com/vi/i2z0KlfNSW8/sddefault.jpg'
+      }, {
+        id: 'https://youtu.be/QjkJ_uEc-jM?si=CyBaphRNVf3sK1Zw',
+        title: 'Community Health Program',
+        description: 'Our commitment to community health and wellness initiatives.',
+        thumbnail: 'https://img.youtube.com/vi/QjkJ_uEc-jM/sddefault.jpg'
+      }
+    ];
+
+    // Mock testimonial data
+    const testimonials = [
+      {
+        name: 'Mr. Sandeep Banaodiya',
+        role: 'Vice President Sales at Solarium Green Energy',
+        text: 'I like the work in terms of design and specifically the color codes & furniture design.',
+        rating: 5
+      },
+      {
+        name: 'Brijesh Patel',
+        role: 'NRI Client',
+        text: "They have given the whole new look of the house which we couldn't belive that this house could be design like this.",
+        rating: 5
+      },
+      {
+        name: 'Dr. Mitesh Patel Jenshiv',
+        role: 'Consultant Physician',
+        text: 'The interior design of our hospital by Favourite Design Studio has created a calm, welcoming, and efficient environment. The spaces are well-planned, aesthetically pleasing, and truly enhance both patient comfort and staff workflow. I appreciate the thoughtful approach and attention to detail that reflects genuine care for healthcare design.',
+        rating: 5
+      },
+
+    ];
+
+    // Get elements
+    const videosGrid = document.querySelector('.videos-grid');
+    const testimonialsGrid = document.querySelector('.testimonials-grid');
+
+    // Create video cards
+    function createVideoCards() {
+      videos.forEach(video => {
+        const videoCard = document.createElement('div');
+        videoCard.className = 'video-card';
+        videoCard.innerHTML = `
+                    <div style="position: relative;">
+                        <img src="${video.thumbnail}" alt="${video.title}" class="video-thumbnail">
+                        <div class="play-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">${video.title}</h3>
+                        <p class="video-description">${video.description}</p>
+                    </div>
+                `;
+
+        // Add click event to open YouTube video in new tab
+        videoCard.addEventListener('click', () => {
+          window.open(`${video.id}`, '_blank');
+        });
+
+        videosGrid.appendChild(videoCard);
+      });
+    }
+
+    // Create testimonial cards
+    function createTestimonialCards() {
+      testimonials.forEach(testimonial => {
+        // Get first letter of name for avatar
+        const firstLetter = testimonial.name.charAt(0);
+
+        // Create star rating
+        let ratingHTML = '';
+        for (let i = 0; i < testimonial.rating; i++) {
+          ratingHTML += '<svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>';
+        }
+
+        const testimonialCard = document.createElement('div');
+        testimonialCard.className = 'testimonial-card';
+        testimonialCard.innerHTML = `
+                    <p class="testimonial-text">${testimonial.text}</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">${firstLetter}</div>
+                        <div class="author-info">
+                            <div class="author-name">${testimonial.name}</div>
+                            <div class="author-role">${testimonial.role}</div>
+                            <div class="rating">${ratingHTML}</div>
+                        </div>
+                    </div>
+                `;
+
+        testimonialsGrid.appendChild(testimonialCard);
+      });
+    }
+
+    // Initialize the page
+    createVideoCards();
+    createTestimonialCards();
+  </script>
+
+</body>
+
+</html>

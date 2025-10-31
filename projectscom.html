@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="components/LOGO PNG.png">
+    <title>Commercial Architecture Projects | Offices, Clinics & Retail Spaces | Favourite Design Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+        content="View our portfolio of commercial architecture projects—modern clinics, corporate offices, retail stores & healthcare facilities designed for function and impact.">
+    <meta name="keywords"
+        content="commercial architecture, office building design, clinic architecture, retail interior design, healthcare facility projects, corporate office architects, commercial space planning, business center design, modern commercial buildings, architectural firm for businesses">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="components/LOGO PNG.png" alt="logo" height="100px"
+                    width="110px">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="videos.html">VIDEOS</a></li>
+            <li><a href="contactus.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <section class="videos-section">
+        <h2 class="section-title">Our Commercials Gallery</h2>
+    </section>
+    <div class="gallery-container">
+        <!-- Gallery items will be dynamically added here -->
+    </div>
+
+    <div class="fullscreen-modal">
+        <div class="fullscreen-content">
+            <img src="" alt="Fullscreen Image" class="fullscreen-image">
+            <button class="fullscreen-close-btn">&times;</button>
+        </div>
+    </div>
+
+    <div class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="social-icons">
+        <a href="https://www.pinterest.com/favourite_design_studio/" target="_blank"><img src="components/pinterest.png" alt="Pinterest"></a>
+    <a href="https://www.youtube.com/@FavouriteDesignStudio" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+    <a href="https://www.instagram.com/favourite_design_studio" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+    </div>
+
+    <script>
+        // Mock gallery data with preloaded images for faster loading
+        const galleryItems = [
+            {
+                id: 1,
+                src: "components/projects/commercials/20220621_185557.jpg",
+                caption: "Modern Solarium"
+            },
+            {
+                id: 2,
+                src: "components/projects/commercials/20220621_185655.jpg",
+                caption: "Working Area"
+            },
+            {
+                id: 3,
+                src: "components/projects/commercials/20220621_185723.jpg",
+                caption: "Wards"
+            },
+            {
+                id: 4,
+                src: "components/projects/commercials/20220621_185905.jpg",
+                caption: "Orientation Room"
+            },
+            {
+                id: 5,
+                src: "components/projects/commercials/20220621_190020.jpg",
+                caption: "Waiting Area"
+            },
+            {
+                id: 6,
+                src: "components/projects/commercials/20220621_190155.jpg",
+                caption: "Main Office"
+            },
+            {
+                id: 7,
+                src: "components/projects/commercials/20220621_190210.jpg",
+                caption: "Office 1"
+            },
+            {
+                id: 8,
+                src: "components/projects/commercials/20220621_190227.jpg",
+                caption: "Office Center"
+            },
+            {
+                id: 9,
+                src: "components/projects/commercials/20220621_190325.jpg",
+                caption: "Wall"
+            }
+        ];
+
+        // Get elements
+        const galleryContainer = document.querySelector('.gallery-container');
+        const fullscreenModal = document.querySelector('.fullscreen-modal');
+        const fullscreenImage = document.querySelector('.fullscreen-image');
+        const fullscreenCloseBtn = document.querySelector('.fullscreen-close-btn');
+        const loadingSpinner = document.querySelector('.loading-spinner');
+
+        // Preload all images for faster loading
+        function preloadAllImages() {
+            galleryItems.forEach(item => {
+                const img = new Image();
+                img.src = item.src;
+            });
+        }
+
+        // Create gallery items
+        function createGalleryItems() {
+            // Show loading spinner
+            loadingSpinner.style.display = 'flex';
+
+            // Preload images
+            preloadAllImages();
+
+            // Simulate loading time for visual effect
+            setTimeout(() => {
+                // Hide loading spinner
+                loadingSpinner.style.display = 'none';
+
+                // Create gallery items
+                galleryItems.forEach(item => {
+                    const galleryItem = document.createElement('div');
+                    galleryItem.className = 'gallery-item';
+                    galleryItem.innerHTML = `
+                        <img src="${item.src}" alt="${item.caption}" class="gallery-image">
+                        <div class="image-caption">${item.caption}</div>
+                    `;
+
+                    // Add click event to open fullscreen
+                    galleryItem.addEventListener('click', () => {
+                        openFullscreen(item.src);
+                    });
+
+                    galleryContainer.appendChild(galleryItem);
+                });
+            }, 300); // Quick loading time for better user experience
+        }
+
+        // Function to open fullscreen image
+        function openFullscreen(imgUrl) {
+            fullscreenImage.src = imgUrl;
+            fullscreenModal.classList.add('active');
+        }
+
+        // Close fullscreen modal
+        fullscreenCloseBtn.addEventListener('click', () => {
+            fullscreenModal.classList.remove('active');
+        });
+
+        // Close fullscreen modal when clicking outside
+        fullscreenModal.addEventListener('click', (e) => {
+            if (e.target === fullscreenModal) {
+                fullscreenModal.classList.remove('active');
+            }
+        });
+
+        // Close fullscreen modal on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                fullscreenModal.classList.remove('active');
+            }
+        });
+
+        // Initialize gallery
+        createGalleryItems();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="components/LOGO PNG.png">
+  <title>Premium Interior Design for Hospitals & Homes | Favourite Design Studio - Best Architects in Gujarat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta name="description"
+    content="Elevate spaces with our expert interior design services—specializing in healthcare facilities, luxury bungalows & commercial interiors.">
+  <meta name="keywords"
+    content="hospital interior design, bungalow interior design, luxury home interiors, commercial interior design, sustainable interiors, modern interior design, architectural interiors, space planning, functional interiors, premium interior designers">
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="components/LOGO PNG.png" alt="logo" height="100px"
+          width="110px">
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">HOME</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="projects.html">PROJECTS</a></li>
+      <li><a href="videos.html">VIDEOS</a></li>
+      <li><a href="contactus.html">CONTACT US</a></li>
+    </ul>
+  </nav>
+  <div class="projects-container" style="height: 330px;">
+    <div class="project-card" data-project="laproscopy">
+      <img src="https://i.pinimg.com/736x/6f/36/1b/6f361b792c8130cc3836b3ecec8ab393.jpg" height="305px"  alt="Interiors"
+        class="project-image">
+      <div class="logo-overlay">
+        <div class="logo-icon"></div>
+      </div>
+      <div class="project-info">
+        <div class="project-title">Interiors</div>
+        <div class="project-location">Modern interior design</div>
+      </div>
+    </div>
+
+    <div class="project-card" data-project="sai-neelkanth">
+      <img src="https://i.pinimg.com/736x/ce/49/bb/ce49bb8289355517bf7163b4f25e4b80.jpg" alt="Sai Neelkanth Hospital"
+        class="project-image">
+      <div class="logo-overlay">
+        <div class="logo-icon"></div>
+      </div>
+      <div class="project-info">
+        <div class="project-title">Bungalows</div>
+        <div class="project-location">Modern bungalow design</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery-modal">
+    <div class="gallery-content">
+      <div class="gallery-header">
+        <h2 class="gallery-title">Project Gallery</h2>
+        <button class="close-btn">&times;</button>
+      </div>
+      <div class="gallery-images">
+        <!-- Images will be dynamically added here -->
+      </div>
+    </div>
+  </div>
+
+  <div class="fullscreen-modal">
+    <div class="fullscreen-content">
+      <img src="" alt="Fullscreen Image" class="fullscreen-image">
+      <button class="fullscreen-close-btn">&times;</button>
+    </div>
+  </div>
+
+  <div class="loading-spinner">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Social Icons -->
+  <div class="social-icons">
+    <a href="https://www.pinterest.com/favourite_design_studio/" target="_blank"><img src="components/pinterest.png"
+        alt="Pinterest"></a>
+    <a href="https://www.youtube.com/@FavouriteDesignStudio" target="_blank"><img
+        src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+    <a href="https://www.instagram.com/favourite_design_studio" target="_blank"><img
+        src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+  </div>
+
+  <script>
+    // Mock project data with preloaded images for faster loading
+      const projects = {
+            laproscopy: [
+                "https://i.pinimg.com/736x/ed/ec/cf/edeccf9ac549d7fa02c64b9377f0dd02.jpg",
+                "https://i.pinimg.com/736x/f7/87/db/f787db7aa00a7232ca31dfc503112e14.jpg",
+                "https://i.pinimg.com/736x/b6/71/cc/b671ccd73a06c6c1a4c5850323a5b499.jpg",
+                "https://i.pinimg.com/736x/6f/ca/7c/6fca7c4c251c320bcfce96258c0cfc47.jpg",
+                "https://i.pinimg.com/736x/54/38/0b/54380b169c6ab1ef568697bb5c4bb7a6.jpg",
+                "https://i.pinimg.com/736x/b7/fd/37/b7fd374e9e7ca05032cb49831fb3a350.jpg",
+                "https://i.pinimg.com/736x/9f/48/bd/9f48bd41eb8b77bac19a6fa84f6ce70b.jpg",
+                "https://i.pinimg.com/736x/a0/ef/e7/a0efe7f9574130cc6c385366ebc7aee0.jpg",
+                "https://i.pinimg.com/736x/7d/42/bd/7d42bd7c1a2a647c55901fecbe3e4ff2.jpg",
+                "https://i.pinimg.com/736x/d7/00/d2/d700d270ecb1d87493314f2a755b6985.jpg",
+                "https://i.pinimg.com/736x/b8/ed/35/b8ed351f4b2aefaab5d8ca42fbd4ffe2.jpg",
+                "https://i.pinimg.com/736x/6f/36/6b/6f366ba772e7cabac52066db2eb91bc2.jpg",
+                "https://i.pinimg.com/736x/7f/73/5c/7f735c31da9acdb06720f8e567414463.jpg",
+                "https://i.pinimg.com/736x/ab/fc/58/abfc58915dd17b7f9a04e154449b74f7.jpg",
+                "https://i.pinimg.com/736x/71/a2/4c/71a24c1a3902878cd3bd12d6cc214322.jpg",
+                "https://i.pinimg.com/736x/78/c6/f6/78c6f62b77cc98bec71344b3024a8d2b.jpg",
+                "https://i.pinimg.com/736x/17/fb/b2/17fbb29703e8f572bdda84697e979609.jpg",
+                "https://i.pinimg.com/736x/27/69/a3/2769a35507a60a02bbc76c244121dcdf.jpg"
+            ],
+            'sai-neelkanth': [
+                "https://i.pinimg.com/736x/6f/47/8e/6f478eb419ae772098c67f7dec63e223.jpg",
+                "https://i.pinimg.com/736x/d6/a5/b0/d6a5b0b7172c5544eef0812faab37687.jpg",
+                "https://i.pinimg.com/736x/b7/29/75/b72975f61d70be9e7e454f3eff1f2a2c.jpg",
+                "https://i.pinimg.com/736x/ac/00/9f/ac009fa6e7aae30f764e72fe6448859b.jpg",
+                "https://i.pinimg.com/736x/db/92/f5/db92f5295cb34424a711ba2b16d02744.jpg",
+                "https://i.pinimg.com/736x/18/71/34/1871340e27fe88ed86c1164088ae6cfd.jpg",
+                "https://i.pinimg.com/736x/93/55/83/93558309193143c48f34ef7767cf6338.jpg",
+                "https://i.pinimg.com/736x/97/7e/43/977e437a3a61f25d25da3be6b06651b1.jpg",
+                "https://i.pinimg.com/736x/ec/59/e7/ec59e7c6cf6dbb9e95906736e6fdb388.jpg",
+                "https://i.pinimg.com/736x/ce/49/bb/ce49bb8289355517bf7163b4f25e4b80.jpg"
+            ]
+        };
+
+        // Project titles mapping
+        const projectTitles = {
+            laproscopy: "Laparoscopy Hospital - Pune",
+            'sai-neelkanth': "Sai Neelkanth Hospital - Kalyan"
+        };
+
+        // Get elements
+        const projectCards = document.querySelectorAll('.project-card');
+        const galleryModal = document.querySelector('.gallery-modal');
+        const closeBtn = document.querySelector('.close-btn');
+        const galleryImagesContainer = document.querySelector('.gallery-images');
+        const galleryTitle = document.querySelector('.gallery-title');
+        const loadingSpinner = document.querySelector('.loading-spinner');
+        const fullscreenModal = document.querySelector('.fullscreen-modal');
+        const fullscreenImage = document.querySelector('.fullscreen-image');
+        const fullscreenCloseBtn = document.querySelector('.fullscreen-close-btn');
+
+        // Preload images for faster loading
+        function preloadImages(imageUrls) {
+            imageUrls.forEach(url => {
+                const img = new Image();
+                img.src = url;
+            });
+        }
+
+
+    // Add click event to each project card
+    projectCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const projectId = card.getAttribute('data-project');
+        showGallery(projectId);
+      });
+    });
+
+    // Close modal when clicking the close button
+    closeBtn.addEventListener('click', () => {
+      galleryModal.classList.remove('active');
+      galleryImagesContainer.innerHTML = '';
+    });
+
+    // Close modal when clicking outside
+    galleryModal.addEventListener('click', (e) => {
+      if (e.target === galleryModal) {
+        galleryModal.classList.remove('active');
+        galleryImagesContainer.innerHTML = '';
+      }
+    });
+
+    // Function to show gallery
+    function showGallery(projectId) {
+      // Show loading spinner
+      loadingSpinner.style.display = 'flex';
+
+      // Preload images for this project
+      preloadImages(projects[projectId]);
+
+      // Simulate loading time (for visual effect)
+      setTimeout(() => {
+        // Hide loading spinner
+        loadingSpinner.style.display = 'none';
+
+        // Set gallery title
+        galleryTitle.textContent = projectTitles[projectId];
+
+        // Clear previous images
+        galleryImagesContainer.innerHTML = '';
+
+        // Add images to gallery
+        const images = projects[projectId];
+        images.forEach(imgUrl => {
+          const imgElement = document.createElement('img');
+          imgElement.src = imgUrl;
+          imgElement.alt = `${projectTitles[projectId]} Image`;
+          imgElement.className = 'gallery-image';
+          imgElement.addEventListener('click', () => {
+            openFullscreen(imgUrl);
+          });
+          galleryImagesContainer.appendChild(imgElement);
+        });
+
+        // Show gallery modal
+        galleryModal.classList.add('active');
+      }, 500); // Reduced from 1000ms to 500ms for faster loading feel
+    }
+
+    // Function to open fullscreen image
+    function openFullscreen(imgUrl) {
+      fullscreenImage.src = imgUrl;
+      fullscreenModal.classList.add('active');
+    }
+
+    // Close fullscreen modal
+    fullscreenCloseBtn.addEventListener('click', () => {
+      fullscreenModal.classList.remove('active');
+    });
+
+    // Close fullscreen modal when clicking outside
+    fullscreenModal.addEventListener('click', (e) => {
+      if (e.target === fullscreenModal) {
+        fullscreenModal.classList.remove('active');
+      }
+    });
+
+    // Close fullscreen modal on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        fullscreenModal.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+
+</html>
